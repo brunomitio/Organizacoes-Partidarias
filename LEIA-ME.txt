@@ -1,0 +1,26 @@
+Banco de Organizações Partidárias Municipais
+O banco relaciona as organizações partidárias, por ano, entre os períodos de 2007 a 2015.
+Foi construído a partir dos registros fornecidos pelo TSE.
+É organizado por chaves. Cada chave (linha) identifica um partido [vigente no TSE naquele ano] em determinado município.
+Cada chave possui os seguintes atributos
+o	Partido: sigla do Partido;
+o	Cod_Ibge: Código IBGE do município (sete dígitos);
+o	UF: Sigla da Unidade Federativa em que o órgão está;
+o	dias_D_ano: a quantidade de dias em que o partido manteve a organização “Diretório” naquele município;
+o	dias_CP_ano: a quantidade de dias em que o partido manteve a organização “Comissão Provisória” naquele município;
+o	dias_CI_ano: a quantidade de dias em que o partido manteve a organização “Comissão Interventora” naquele município;
+o	dias_N_ano: a quantidade de dias em que o partido não manteve nenhuma forma de organização naquele município;
+o	Posicao: como a organização partidária se organizou naquele município [“Diretório”, “Comissão Provisória”, “Comissão Interventora”] ou não [“Nenhum”].
+Algumas observações importantes:
+1.	Todas as organizações onde atualmente o partido não tem registro no TSE foram excluídas da base. Enquadram-se neste caso os partidos: MB, PAN, PL, PRONA, PS, PST, PTS.
+2.	Somente foram considerados os municípios com registro e codificação do IBGE, e a partir do ano em que a localização passou a contar com o registro. É o caso do município de Mojuí dos Campos (Cod_Ibge 1504752), que teve registro apenas a partir do ano de 2013. Considera-se então, que as organizações partidárias poderiam datar apenas a partir de 01/01/2013.
+3.	Somente foram considerados as organizações partidárias a partir da data de deferimento no TSE. O PEN, por exemplo, teve a data-início de suas organizações a partir de 19/06/2012, data de registro no TSE.
+4.	Foram observados alguns registros de organizações municipais duplicados na base do TSE. Isto é, em um mesmo período de tempo, manteve registro de dois tipos de organizações (CP, D ou CI) distintos. A relação de todas as organizações encontradas estão relacionadas no arquivo Relação_Duplicados.xlsx.
+Assume-se que estes são casos de erro de registro do partido. Então, optou-se pelos seguintes critérios:
+a.	Quando se trata do mesmo tipo de organização com períodos diferentes, considera-se aquele com prazo maior. Exemplo: o PPS, no município de Bom Jesus da Lapa, BA (Cod_Ibge 2903904), é registrado como Comissão Provisória em dois períodos início - fim: 30/09/11-12/07/12 e 20/06/12-22/04/14. Neste caso, considera-se o intervalo 30/09/11–22/04/14, como o período de vigência da organização;
+b.	Quando se trata de tipos de organização distintos, com períodos concomitantes, considera-se o intervalo de registro do mais antigo para o mais recente. Exemplo: o PSDB, no município de Santa Margarida – MG (Cod_Ibge 3157906), é registrado como Comissão Provisória no período início-fim: 13/07/15 - 17/05/17, e como Diretório no período 10/05/15-17/05/17. Neste caso, considera-se o intervalo 10/05/15 - 12/07/15, como Diretório e 13/07/15 - 17/05/17 como Comissão Provisória. Outro exemplo: o PSB no município de Coari – AM (Cod_Ibge 1301209) tem registrado dois períodos coincidentes 12/02/08 - 11/02/10 (Diretório) e 13/08/09 - 10/11/09 (Comissão Provisória). Neste caso, considera-se os intervalos: 12/02/08 - 12/08/09 (Diretório); 13/08/09 - 10/11/09 (Comissão Provisória) e  11/11/09 - 11/02/10 (Diretório).
+c.	Quando o partido manteve organizações Diretório e Comissão Provisória em períodos Inicio-Fim idênticos, consideramos o tipo de organização por Diretório. É o caso do DEM no município de Cristal, RS, que manteve o registro de Diretório e Comissão Provisória no período 27/12/07 - 26/12/09.
+
+
+21 de junho de 2016,
+Bruno Mitio Assano Silva.
